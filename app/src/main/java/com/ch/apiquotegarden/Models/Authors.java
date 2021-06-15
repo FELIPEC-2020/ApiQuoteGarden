@@ -1,4 +1,4 @@
 package com.ch.apiquotegarden.Models;
 
-public class Genre {
+public class Authors {
 }
