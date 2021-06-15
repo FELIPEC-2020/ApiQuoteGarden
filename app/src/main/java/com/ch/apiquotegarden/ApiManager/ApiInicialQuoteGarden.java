@@ -1,8 +1,8 @@
 package com.ch.apiquotegarden.ApiManager;
 
-import com.ch.apiquotegarden.Models.Author;
-import com.ch.apiquotegarden.Models.Genre;
-import com.ch.apiquotegarden.Models.Quote;
+import com.ch.apiquotegarden.Models.Authors;
+import com.ch.apiquotegarden.Models.Genres;
+import com.ch.apiquotegarden.Models.Quotes;
 
 import java.util.List;
 
@@ -13,11 +13,11 @@ public interface ApiInicialQuoteGarden {
     String BASE_URL = "https://quote-garden.herokuapp.com/api/v3/";
 
     @GET("quotes")
-    Call<List<Quote>> getQuotes();
+    Call<Quotes> getQuotes();
 
     @GET("genres")
-    Call<List<Genre>> getGenres();
+    Call<Genres> getGenres();
 
     @GET("authors")
-    Call<List<Author>> getAuthors();
+    Call<Authors> getAuthors();
 }
