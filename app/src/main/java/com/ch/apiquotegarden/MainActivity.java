@@ -2,8 +2,11 @@ package com.ch.apiquotegarden;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -49,6 +52,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        onItemClick();
+    }
 
 }

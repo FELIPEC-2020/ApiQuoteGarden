@@ -11,19 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ApiQuoteGarden">
-        <activity android:name=".Activity_Genero">
+        <activity android:name=".QuotesDetalle"></activity>
+        <activity android:name=".MainPrincipal">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_Autor">
-
-        </activity>
+        <activity android:name=".Activity_Genero"></activity>
+        <activity android:name=".Activity_Autor" />
         <activity android:name=".MainActivity" />
-
-
     </application>
 
 </manifest>
