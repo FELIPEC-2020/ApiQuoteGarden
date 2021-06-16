@@ -2,6 +2,7 @@ package com.ch.apiquotegarden;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +19,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     ListView lvQuote;
     Quotes myQuotes;
 
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         lvQuote = findViewById(R.id.lvQuote);
         getQuoteFromApi();
+        lvQuote.setOnItemClickListener(this);
 
     }
 
@@ -54,7 +56,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        onItemClick();
+        Intent intent = new Intent(this, QuotesDetalle.class);
+        intent.putExtra("objQuote", myQuotes.getListaQuote().get(position));
+        startActivity(intent);
     }
+
+    /*@Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+      Intent intent = new Intent(this, QuotesDetalle.class);
+        intent.putExtra("objQuote", myQuotes.get(position));
+        startActivity(intent);
+    }*/
 
 }

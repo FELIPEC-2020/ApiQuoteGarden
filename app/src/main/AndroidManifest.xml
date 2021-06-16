@@ -22,6 +22,10 @@
         <activity android:name=".Activity_Genero"></activity>
         <activity android:name=".Activity_Autor" />
         <activity android:name=".MainActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
